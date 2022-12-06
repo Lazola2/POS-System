@@ -14,3 +14,5 @@ Tasks for tomorrow:
  - Work on creating a new item and add it to the items and update the state
  - Use the state(re-render the DOM when content has changed)
  - Add more if the are any
+ - Change the images for the items
+ - Increase / Decrease the quantity on each item and update the price
