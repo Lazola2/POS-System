@@ -40,11 +40,52 @@ let items = [
         price: 9000,
         specifications: ['Lenovo ThinkPad', 'Intel Core i5 Processor', '8GB RAM', '256GB SSD', 'Windows 10 Pro'],
         imageLink: 'https://i.postimg.cc/qBPXzD3m/download.jpg'
+    },
+    {
+        id: 7,
+        brand: 'Lenovo',
+        price: 9000,
+        specifications: ['Lenovo ThinkPad', 'Intel Core i5 Processor', '8GB RAM', '256GB SSD', 'Windows 10 Pro'],
+        imageLink: 'https://i.postimg.cc/qBPXzD3m/download.jpg'
+    },
+    {
+        id: 8,
+        brand: 'Lenovo',
+        price: 9000,
+        specifications: ['Lenovo ThinkPad', 'Intel Core i5 Processor', '8GB RAM', '256GB SSD', 'Windows 10 Pro'],
+        imageLink: 'https://i.postimg.cc/qBPXzD3m/download.jpg'
+    },
+    {
+        id: 9,
+        brand: 'Lenovo',
+        price: 9000,
+        specifications: ['Lenovo ThinkPad', 'Intel Core i5 Processor', '8GB RAM', '256GB SSD', 'Windows 10 Pro'],
+        imageLink: 'https://i.postimg.cc/qBPXzD3m/download.jpg'
+    },
+    {
+        id: 10,
+        brand: 'Lenovo',
+        price: 9000,
+        specifications: ['Lenovo ThinkPad', 'Intel Core i5 Processor', '8GB RAM', '256GB SSD', 'Windows 10 Pro'],
+        imageLink: 'https://i.postimg.cc/qBPXzD3m/download.jpg'
+    },
+    {
+        id: 11,
+        brand: 'Lenovo',
+        price: 9000,
+        specifications: ['Lenovo ThinkPad', 'Intel Core i5 Processor', '8GB RAM', '256GB SSD', 'Windows 10 Pro'],
+        imageLink: 'https://i.postimg.cc/qBPXzD3m/download.jpg'
+    },
+    {
+        id: 12,
+        brand: 'Lenovo',
+        price: 9000,
+        specifications: ['Lenovo ThinkPad', 'Intel Core i5 Processor', '8GB RAM', '256GB SSD', 'Windows 10 Pro'],
+        imageLink: 'https://i.postimg.cc/qBPXzD3m/download.jpg'
     }
 ]
 
 // sending the data to the local storage
 // localStorage.setItem('items', JSON.stringify(items));
-
-localStorage.setItem('items', JSON.stringify(items))
+localStorage.setItem('items', JSON.stringify(items));
 

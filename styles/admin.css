@@ -1,0 +1,24 @@
+body {
+    background-color: #1b1b1b;
+}
+
+table {
+    background-color: rgb(58, 58, 58);
+}
+
+.id {
+    width: 5%;
+} 
+
+.brand {
+    width: 10%;
+}
+
+.price {
+    width: 15%;
+}
+
+.btn-add-product {
+    background-color: #4B7CDB;
+    font-weight: bolder;
+}

@@ -15,3 +15,23 @@ body {
 .items-container {
     min-height: 40vh;
 }
+
+.card-body {
+    background-color: #020202e6;
+    border-radius: 5px;
+    margin: 3px;
+}
+
+.button-group {
+    height: 20px;
+    border-radius: 5px !important;
+}
+
+.button-group button {
+    height: 100%;
+}
+
+.add-btn {
+    background-color: white;
+    font-weight: 600;
+}

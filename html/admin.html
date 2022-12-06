@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>POS System</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    
+    
+    <script defer src="../js/adminPage.js"></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='../styles/admin.css'>
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+</head>
+
+<body style="height: 100vh; width: 100%;">
+    <div class="website-container w-100 h-100 p-0">
+        <section class="product-section w-100 h-100">
+            <header class="d-flex justify-content-between">
+                <!-- logo in the header -->
+                <div class="logo text-white d-flex align-items-center">
+                    <h2 class="logo h-100 d-flex align-items-center mt-2">CODE</h2>
+                    <div class="dots d-flex align-items-center ps-1">
+                        <li class="bg-primary rounded-5 circles mx-1 list-unstyled"></li>
+                        <li class="bg-primary rounded-5 circles mx-1 list-unstyled"></li>
+                        <li class="bg-primary rounded-5 circles mx-1 list-unstyled"></li>
+                    </div>
+                </div>
+
+                <!-- navbar in the header -->
+                <nav class="navigation d-flex justify-content-lg-between align-items-center text-primary list-unstyled">
+                    <a href="../index.html">
+                        <li class="px-2">Home</li>
+                    </a>
+                    <a href="html/products.html" class="text-decoration-none">
+                        <li class="px-2">Products</li>
+                    </a>
+                    <li class="px-2">Checkout</li>
+                    <li class="px-2">Admin</li>
+                </nav>
+            </header>
+            <main class="d-flex flex-column gap-4 justify-content-center align-items-center">
+                <!-- heading -->
+                <h1 class="text-center fs-1 fw-bolder text-white mt-5">Admin</h1>
+                
+                <!-- button to add a new item -->
+                <button class="btn btn-primary btn-add-product py-2 my-3 mb-5 px-5">ADD NEW ITEM</button>
+
+                <!-- table -->
+                <table class="table text-white w-75">
+                    <thead>
+                        <tr>
+                            <th scope="col" class="id">ID</th>
+                            <th scope="col" class="brand">BRAND</th>
+                            <th scope="col" class="price">PRICE</th>
+                            <th scope="col" class="specifications">SPECIFICATIONS</th>
+                            <th scope="col" class="actions">ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                       
+                    </tbody>
+                </table>
+            </main>
+            <footer class="h-50 pt-4 mt-5">
+                <div class="contacts ps-3">
+                    <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Contact Us</p>
+                    <div class="items text-white">
+                        <div class="item d-flex">
+                            <i class="bi bi-telephone ms-3 me-4"></i>
+                            <p>078 212 2122</p>
+                        </div>
+                        <div class="item d-flex">
+                            <i class="bi bi-envelope-at ms-3 me-4"></i>
+                            <p>clientqueries@gmail.co.za</p>
+                        </div>
+                        <div class="item d-flex">
+                            <i class="bi bi-facebook ms-3 me-4"></i>
+                            <p>facebook.com/code...</p>
+                        </div>
+                        <div class="item d-flex">
+                            <i class="bi bi-twitter ms-3 me-4"></i>
+                            <p>twitter.com/code...</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="address">
+                    <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Address</p>
+                    <div class="items text-white">
+                        <div class="item d-flex justify-content-center">
+                            <p>312 Elon St.</p>
+                        </div>
+                        <div class="item d-flex justify-content-center">
+                            <p>Heidaveld</p>
+                        </div>
+                        <div class="item d-flex justify-content-center">
+                            <p>Cape Town</p>
+                        </div>
+                        <div class="item d-flex justify-content-center">
+                            <p>7756</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trading-hours">
+                    <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Trading Hours</p>
+                    <div class="items text-white">
+                        <div class="item d-flex justify-content-center">
+                            <p>Mon-Fri: 07:00 - 19:00</p>
+                        </div>
+                        <div class="item d-flex justify-content-center">
+                            <p>Sat: 08:00 - 18:00</p>
+                        </div>
+                        <div class="item d-flex justify-content-center">
+                            <p>Sun: 08:00-17:00</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="message row px-5">
+                    <input class="col-10 fs-5 border-0 ps-5" type="text" placeholder="send us a message...">
+                    <button class="bg-primary col-2 border-0 fs-5 text-white">Send</button>
+                </form>
+                <p class="copyright text-white text-center mt-2">&copy;copyright 2022</p>
+            </footer>
+        </section>
+
+    </div>
+</body>
+
+</html>
