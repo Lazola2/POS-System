@@ -1,0 +1,25 @@
+/* styling the footer */
+footer {
+    background: rgba(0, 0, 0, .9);
+    display: grid;
+    grid-template-columns: 1fr repeat(3, 2.5fr) 1fr;
+    grid-template-rows: 4fr 1fr 0.8fr;
+}
+
+footer .contacts {
+    grid-column: 2/3;
+}
+
+footer .message {
+    grid-row: 2/3;
+    grid-column: 2/5;
+}
+
+footer form input {
+    outline: none;
+}
+
+footer .copyright {
+    grid-row: 3/4;
+    grid-column: 3/4;
+}

@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>POS System</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <script defer src='js/landingPage.js'></script>
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+        integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
     <!-- CSS only -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!-- JavaScript Bundle with Popper -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-    <!-- js for landing page -->
-    <script src="js/landingPage.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel='stylesheet' type='text/css' media='screen' href='styles/landingPage.css'>
+    <link rel="stylesheet" href="styles/footer.css">
 </head>
-<body style="height: 100vh; width: 100vw;">
-    <div class="container-fluid w-100 h-100 p-0">
+
+<body style="height: 100vh; width: 100%;">
+    <div class="website-container w-100 h-100 p-0">
         <section class="landing-section w-100 h-100">
             <header class="d-flex justify-content-between">
                 <!-- logo in the header -->
@@ -29,27 +31,95 @@
                 </div>
 
                 <!-- navbar in the header -->
-                <nav class="navigation me-1 d-flex justify-content-between align-items-center text-primary list-unstyled">
+                <nav class="navigation d-flex justify-content-lg-between align-items-center text-primary list-unstyled">
                     <li class="px-2">Home</li>
-                    <li class="px-2">Products</li>
+                    <a href="html/products.html" class="text-decoration-none">
+                        <li class="px-2">Products</li>
+                    </a>
                     <li class="px-2">Checkout</li>
                     <li class="px-2">Admin</li>
                 </nav>
             </header>
             <main class="d-flex justify-content-center flex-column">
-                <h1 class="heading-text text-white mb-4">Best 
+                <h1 class="heading-text text-white mb-4">Best
                     <span class="text-primary ms-1">laptops</span><br>at
                     <span class="text-primary ms-1">lowest prices</span>
                 </h1>
                 <p class="text-white lead mb-4">
-                    We provide the best quality laptops to your fingertips. 
+                    We provide the best quality laptops to your fingertips.
                     <br> Select the items you need and you will be set to go.
                 </p>
-                <button class="bg-primary text-white mt-3">SHOW ITEMS</button>    
+                <a href="html/products.html">
+                    <button class="bg-primary text-white mt-3">SHOW ITEMS</button>
+                </a>
             </main>
-
         </section>
-        <footer class="h-50"></footer>
+        <footer class="h-50 pt-4">
+            <div class="contacts ps-3">
+                <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Contact Us</p>
+                <div class="items text-white">
+                    <div class="item d-flex">
+                        <i class="bi bi-telephone ms-3 me-4"></i>
+                        <p>078 212 2122</p>
+                    </div>
+                    <div class="item d-flex">
+                        <i class="bi bi-envelope-at ms-3 me-4"></i>
+                        <p>clientqueries@gmail.co.za</p>
+                    </div>
+                    <div class="item d-flex">
+                        <i class="bi bi-facebook ms-3 me-4"></i>
+                        <p>facebook.com/code...</p>
+                    </div>
+                    <div class="item d-flex">
+                        <i class="bi bi-twitter ms-3 me-4"></i>
+                        <p>twitter.com/code...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="address">
+                <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Address</p>
+                <div class="items text-white">
+                    <div class="item d-flex justify-content-center">
+                        <p>312 Elon St.</p>
+                    </div>
+                    <div class="item d-flex justify-content-center">
+                        <p>Heidaveld</p>
+                    </div>
+                    <div class="item d-flex justify-content-center">
+                        <p>Cape Town</p>
+                    </div>
+                    <div class="item d-flex justify-content-center">
+                        <p>7756</p>
+                    </div>
+                </div>
+            </div>
+            <div class="trading-hours">
+                <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Trading Hours</p>
+                <div class="items text-white">
+                    <div class="item d-flex justify-content-center">
+                        <p>Mon-Fri: 07:00 - 19:00</p>
+                    </div>
+                    <div class="item d-flex justify-content-center">
+                        <p>Sat: 08:00 - 18:00</p>
+                    </div>
+                    <div class="item d-flex justify-content-center">
+                        <p>Sun: 08:00-17:00</p>
+                    </div>
+                </div>
+            </div>
+            <form class="message row px-5">
+                <input class="col-10 fs-5 border-0 ps-5" type="text" placeholder="send us a message...">
+                <button class="bg-primary col-2 border-0 fs-5 text-white">Send</button>
+            </form>
+            <p class="copyright text-white text-center mt-2">&copy;copyright 2022</p>
+        </footer>
     </div>
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+    <!-- js for landing page -->
+    <script src="js/code.js"></script>
+    <script src="js/landingPage.js"></script>
 </body>
 </html>

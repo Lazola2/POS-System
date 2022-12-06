@@ -1,0 +1,17 @@
+body {
+    background-color: #2e2e2f;
+}
+
+.filter-container {
+    height: auto;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.573); 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 15rem;
+}
+
+.items-container {
+    min-height: 40vh;
+}
