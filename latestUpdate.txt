@@ -1,0 +1,16 @@
+Date: 6 December 2022
+Time: 23:06
+Author: Lazola Makubalo
+
+Note: Managed to add an item to the checkout when the user clicks on the 
+add button on the products page.
+
+Tasks for tomorrow: 
+ - Host the project to netlify,
+ - Create the flowchart in a app and add it to the project
+ - Create the Checkout page and finish it
+ - Work on the filter on the products page
+ - Work on the sort on the admin page
+ - Work on creating a new item and add it to the items and update the state
+ - Use the state(re-render the DOM when content has changed)
+ - Add more if the are any

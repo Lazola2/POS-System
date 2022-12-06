@@ -1,6 +1,15 @@
+let checkoutItems = [];
+
+const addToCheckout = (checkoutItem) => {
+    checkoutItems.unshift(checkoutItem);
+    localStorage.setItem('checkout', JSON.stringify(checkoutItems));
+    alert('Item added to checkout')
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     let itemsContainer = document.querySelector('.items-container');
     let quantitySelected = 1;
+
     JSON.parse(localStorage.getItem('items')).forEach(item => {
         let card = `
         <div class="card mb-5 text-white" style="width: 18rem;">
@@ -20,20 +29,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <p class="card-text text-center">${item.specifications.toString()}</p>
                 <div class="button-holder d-flex justify-content-center">
-                    <button class="btn add-btn w-50">Add</button>
+                    <button class="btn add-btn w-50" onclick='addToCheckout(${JSON.stringify(item)})'>Add</button>
                 </div>
             </div>
         </div>`
         itemsContainer.innerHTML += card;
     });
 
-    let addButtons = document.querySelectorAll('.add-btn');
-    addButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            // let textCount = button.parentElement.parentElement.childNodes[3].childNodes[3].childNodes[1].textContent 
-            // textCount.textContent = parseInt(textCount) + 1;
-        });
-    })
+    // let addButtons = document.querySelectorAll('.add-btn');
+    // addButtons.forEach(button => {
+    //     button.addEventListener('click', () => {
+    //         // let textCount = button.parentElement.parentElement.childNodes[3].childNodes[3].childNodes[1].textContent 
+    //         // textCount.textContent = parseInt(textCount) + 1;
+    //     });
+    // })
 
     // let increaseButtons = document.querySelectorAll('.btn-increase');
     // let lblQuantity = document.querySelector('.lbl-quantity');
