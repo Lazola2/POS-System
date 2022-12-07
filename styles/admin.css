@@ -22,3 +22,29 @@ table {
     background-color: #4B7CDB;
     font-weight: bolder;
 }
+
+/* modal */
+.product-modal{
+    background-color: #2e2e2f;
+    height: 60%;
+    width: 25%;
+    display: grid;
+    grid-template-columns: 0.4fr 2.5fr 2.5fr 0.4fr;
+    grid-template-rows: 1fr .5fr 1fr 2fr repeat(2, 1fr) .5fr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
