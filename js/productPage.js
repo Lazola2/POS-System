@@ -1,9 +1,9 @@
 let checkoutItems = [];
 
 const addToCheckout = (checkoutItem) => {
+    // let itemsOnCheckout = JSON.parse(localStorage.getItem('checkout'));
     checkoutItems.unshift(checkoutItem);
     localStorage.setItem('checkout', JSON.stringify(checkoutItems));
-    alert('Item added to checkout')
 }
 
 document.addEventListener('DOMContentLoaded', () => {

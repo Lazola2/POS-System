@@ -1,0 +1,45 @@
+body {
+    background-color: #2e2e2f;
+}
+
+.checkout-container {
+    min-height: 90vh;
+}
+
+.checkout-item {
+    background: #fff;
+    height: 10em;
+    width: 70%;
+}
+
+.checkout-item img {
+    width: 20%;
+    height: 90%;
+}
+
+.content-holder{
+    width: 75%;
+    height: 90%;
+}
+
+.content-holder button {
+    height: 45px;
+}
+
+.content {
+    height: 85%;
+    width: 80%;
+}
+
+.content p {
+    font-weight: 100;
+    font-size: 15px;
+}
+
+.emoji {
+    font-size: 150px;
+}
+
+.message-holder {
+    background-color: rgba(0, 0, 0, 0.484);
+}
