@@ -41,14 +41,13 @@ function displayCheckout() {
         document.addEventListener('DOMContentLoaded', () => {
             renderCheckout();
         });
+        return;
     }
-    else {
-        checkoutContainer.innerHTML += 
+    checkoutContainer.innerHTML += 
         `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-5 mt-3">
             <h1 class="text-white display-1 mt-5">No items on your checkout</h1>
             <i class="bi bi-emoji-frown text-white emoji"></i>
         </div>`
-    }    
 }
 
 // call the displayCheckout function on default
