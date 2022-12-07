@@ -6,10 +6,10 @@ Note: Managed to add an item to the checkout when the user clicks on the
 add button on the products page.
 
 Tasks for tomorrow: 
- Done- Host the project to netlify, 
+ Done - Host the project to netlify, 
  - Create the flowchart in a app and add it to the project
  - Create the Checkout page and finish it
- - Work on the remove item on checkout page
+ Done - Work on the remove item on checkout page
  - Work on the filter on the products page
  - Work on the sort on the admin page
  - Work on creating a new item and add it to the items and update the state

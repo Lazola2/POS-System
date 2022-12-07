@@ -7,10 +7,12 @@ function removeCheckoutItem(item){
     let newCheckout = checkoutData.filter(entry =>  entry.id !== item.id);
     // overwriting the local storage with new checkout data
     localStorage.setItem('checkout', JSON.stringify(newCheckout));
+    checkoutData = newCheckout;
     
-    checkoutContainer.innerHTML += "<h3 class='text-white'>New data</h3>"
+    checkoutContainer.innerHTML = ""
     // clear the checkout container
     renderCheckout();
+    displayCheckout();
 }
 
 function renderCheckout() {
@@ -31,21 +33,25 @@ function renderCheckout() {
                           </div>
                       </div>`
           // console.log(item)
-          checkoutContainer.innerHTML += item
+          checkoutContainer.innerHTML += item;
       });
 
 }
 
-if (checkoutData.length !== 0) {
-    document.addEventListener('DOMContentLoaded', () => {
-        renderCheckout();
-    });
-}
-else {
-    checkoutContainer.innerHTML += 
-    `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-5">
-        <h1 class="text-white display-1 mt-5">No items on your checkout</h1>
-        <i class="bi bi-emoji-frown text-white emoji"></i>
-    </div>`
+function displayCheckout() {
+    if (checkoutData.length !== 0) {
+        document.addEventListener('DOMContentLoaded', () => {
+            renderCheckout();
+        });
+    }
+    else {
+        checkoutContainer.innerHTML += 
+        `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-5 mt-3">
+            <h1 class="text-white display-1 mt-5">No items on your checkout</h1>
+            <i class="bi bi-emoji-frown text-white emoji"></i>
+        </div>`
+    }    
 }
 
+// call the displayCheckout function on default
+displayCheckout();
