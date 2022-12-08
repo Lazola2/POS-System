@@ -6,6 +6,10 @@ table {
     background-color: rgb(58, 58, 58);
 }
 
+.table-row {
+    border-bottom: 1px solid white;
+}
+
 .id {
     width: 5%;
 } 
@@ -91,7 +95,16 @@ table {
     width: 35%;
 }
 
-
+/* sort element */
+.sort-element {
+    font-size: 15px;
+    margin-left: 1em;
+    font-weight: bolder;
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    padding: 0 5px;
+}
 
 
 

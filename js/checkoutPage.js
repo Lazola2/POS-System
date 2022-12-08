@@ -15,6 +15,7 @@ function removeCheckoutItem(item){
     displayCheckout();
 }
 
+
 function renderCheckout() {
     // load the checkout content
     checkoutData.forEach(checkoutItem => {

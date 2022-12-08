@@ -20,6 +20,8 @@ body {
     background-color: #020202e6;
     border-radius: 5px;
     margin: 3px;
+    height: 50%;
+    box-sizing: border-box;
 }
 
 .button-group {
@@ -31,7 +33,21 @@ body {
     height: 100%;
 }
 
+.card-text {
+    height: 40%;
+    overflow-y: auto;
+}
+
 .add-btn {
     background-color: white;
     font-weight: 600;
+}
+
+.card-img-top{
+    height: 60%;
+    padding: 1rem;
+}
+
+.emoji {
+    font-size: 150px;
 }

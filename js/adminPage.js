@@ -1,8 +1,27 @@
 let items = JSON.parse(localStorage.getItem('items'));
 let tableBody = document.querySelector('.table-body');
 
+
+// sorting 
+let ascending = true; 
+let sortElement = document.querySelector('.sort-element');
+const handleSortOrder = () => {
+    sortElement.innerHTML = ascending ? 
+        '<i class="bi bi-sort-numeric-down"></i>':
+        '<i class="bi bi-sort-numeric-down-alt"></i>'
+}
+handleSortOrder();
+sortElement.addEventListener('click', () => {
+    ascending = !ascending;
+    handleSortOrder();
+
+    // sort by price
+    let sorted = ascending ? items.sort((a,b) => a.price - b.price) : items.sort((a,b) => b.price - a.price)  
+    renderTableContent(sorted);
+});
+
 document.addEventListener('DOMContentLoaded', () => {
-    renderTableContent();
+    renderTableContent(items);
 });
 
 // handle the event for the delete button
@@ -13,7 +32,7 @@ const handleDelete = (item) => {
 
     // update the table
     tableBody.innerHTML = '';
-    renderTableContent();
+    renderTableContent(updatedData);
     displayTableContent();
 }
 
@@ -22,11 +41,12 @@ const handleEdit = () => {
     alert('Edit button clicked');
 }
 
-const renderTableContent = () => {
+const renderTableContent = (_items_) => {
     // load the table content
-    items.forEach(item => {
+    tableBody.innerHTML = "";
+    _items_.forEach(item => {
         tableBody.innerHTML +=
-            `<tr>
+            `<tr class="table-row">
                 <th scope="row">${items.indexOf(item) + 1}</th>
                 <td>${item.brand}</td>
                 <td>${item.price}</td>
@@ -48,7 +68,7 @@ const renderTableContent = () => {
 function displayTableContent() {
     try {
         document.addEventListener('DOMContentLoaded', () => {
-            renderTableContent();
+            renderTableContent(items);
         });
     }
     catch (e) {
@@ -64,7 +84,7 @@ function product(_id_, _brand_, _specifications_, _price_, _color_, _imageLink_)
     // properties of the product
     return {
         id :_id_,
-        brand: _brand_,
+        brand: _brand_.split(' ')[0],
         price: _price_,
         specifications: _specifications_,
         color: _color_,
@@ -100,6 +120,7 @@ btnCompleteAdd.addEventListener('click', () => {
     let specifications = inpSpecifications.value;
     let color = inpColor.value;
     let imageLink = inpImageLink.value;
+    
     let newProduct = product(generateId(), brand, specifications, price, color, imageLink);
     
     let updatedItems = [...items, newProduct];
@@ -109,7 +130,7 @@ btnCompleteAdd.addEventListener('click', () => {
         alert('Item successfully added')
         // update the table
         tableBody.innerHTML = '';
-        renderTableContent();
+        renderTableContent(updatedItems);
         displayTableContent();
     }
     catch(e){

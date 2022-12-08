@@ -61,43 +61,32 @@
                     <h5 class="text-white">Filter</h5>
                     <form action="" class="filter d-flex gap-2">
                         <!-- brand filter -->
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Brand</option>
-                            <option value="1">Lenovo</option>
-                            <option value="2">Acer</option>
-                            <option value="3">HP</option>
-                            <option value="3">MacBook</option>
-                            <option value="3">Dell</option>
-                            <option value="3">Asus</option>
-                            <option value="3">Meccer</option>
+                        <select class="form-select brand-select" aria-placeholder="brand">
+                            <option value="Lenovo">Lenovo</option>
+                            <option value="Acer">Acer</option>
+                            <option value="HP">HP</option>
+                            <option value="MacBook">MacBook</option>
+                            <option value="Dell">Dell</option>
+                            <option value="Asus">Asus</option>
+                            <option value="Meccer">Meccer</option>
                         </select>
 
                         <!-- price filter -->
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Price</option>
-                            <option value="1">Less than R5000</option>
-                            <option value="2">R5000 to R10 000</option>
-                            <option value="3">R10 000 to R17 000</option>
-                            <option value="3">More than R17 000 </option>
-                        </select>
+                        <input type="number" class="form-control min-price" placeholder="min price">
+                        <input type="number" class="form-control max-price" placeholder="max price">
 
                         <!-- color filter -->
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select color-select" aria-label="Default select example">
                             <option selected>Color</option>
-                            <option value="1">Black</option>
-                            <option value="2">Gray</option>
-                            <option value="3">Blue</option>
-                            <option value="3">Silver</option>
+                            <option value="Black">Black</option>
+                            <option value="Gray">Gray</option>
+                            <option value="Blue">Blue</option>
+                            <option value="Silver">Silver</option>
+                            <option value="Silver">White</option>
                         </select>
 
-                        <!-- memory filter -->
-                        <select class="form-select" aria-label="Default select example">
-                            <option selected>Memory</option>
-                            <option value="1">2GB Ram</option>
-                            <option value="2">4GB Ram</option>
-                            <option value="3">8GB Ram</option>
-                        </select>
-                        <button class="btn btn-primary w-25">Filter</button>
+                       
+                        <button class="btn btn-primary w-25 btn-filter">Filter</button>
                     </form>
                     <form action="" class="search">
                         <div class="mb-3 d-flex d-flex gap-2">
