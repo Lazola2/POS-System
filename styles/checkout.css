@@ -6,9 +6,15 @@ body {
     min-height: 90vh;
 }
 
-.checkout-item {
+.checkout-item{
     background: #fff;
     height: 10em;
+    width: 70%;
+}
+
+.total-container{
+    background: #fff;
+    height: 5em;
     width: 70%;
 }
 

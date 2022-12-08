@@ -1,7 +1,8 @@
 let checkoutItems = [];
 let items = JSON.parse(localStorage.getItem('items'));
 
-    let itemsContainer = document.querySelector('.items-container');
+let itemsContainer = document.querySelector('.items-container');
+
 
 const addToCheckout = (checkoutItem) => {
     // let itemsOnCheckout = JSON.parse(localStorage.getItem('checkout'));
