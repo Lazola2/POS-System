@@ -1,14 +1,13 @@
 let items = JSON.parse(localStorage.getItem('items'));
 let tableBody = document.querySelector('.table-body');
 
-
 // sorting 
-let ascending = true; 
+let ascending = true;
 let sortElement = document.querySelector('.sort-element');
 const handleSortOrder = () => {
-    sortElement.innerHTML = ascending ? 
-        '<i class="bi bi-sort-numeric-down"></i>':
-        '<i class="bi bi-sort-numeric-down-alt"></i>'
+    sortElement.innerHTML = ascending ?
+        '<i class="bi bi-sort-numeric-down"></i>' :
+        '<i class="bi bi-sort-numeric-up"></i>'
 }
 handleSortOrder();
 sortElement.addEventListener('click', () => {
@@ -16,7 +15,7 @@ sortElement.addEventListener('click', () => {
     handleSortOrder();
 
     // sort by price
-    let sorted = ascending ? items.sort((a,b) => a.price - b.price) : items.sort((a,b) => b.price - a.price)  
+    let sorted = ascending ? items.sort((a, b) => a.price - b.price) : items.sort((a, b) => b.price - a.price)
     renderTableContent(sorted);
 });
 
@@ -60,9 +59,9 @@ const renderTableContent = (_items_) => {
                     </button>
                 </td>
             </tr>`
-            // tableBody.innerHTML += item;   
+        // tableBody.innerHTML += item;   
     });
-    
+
 }
 
 function displayTableContent() {
@@ -80,16 +79,21 @@ function displayTableContent() {
 // modal script
 
 // creating a constructor function for a new product
-function product(_id_, _brand_, _specifications_, _price_, _color_, _imageLink_){
+function Product(id, brand, specifications, price, color, imageLink) {
     // properties of the product
-    return {
-        id :_id_,
-        brand: _brand_.split(' ')[0],
-        price: _price_,
-        specifications: _specifications_,
-        color: _color_,
-        imageLink: _imageLink_
-    }
+    this.id = id;
+    this.brand = brand.split(' ')[0];
+    this.price = price;
+    this.specifications = specifications;
+    this.color = color;
+    this.imageLink = imageLink;
+
+    this.getItem = () => this.id;
+    this.getBrand = () => this.brand;
+    this.getPrice = () => this.price;
+    this.getSpecifications = () => this.specifications;
+    this.getColor = () => this.color;
+    this.getImageLink = () => this.imageLink;
 }
 
 // modal item
@@ -114,18 +118,18 @@ btnAddProduct.addEventListener('click', () => {
 let btnCompleteAdd = document.querySelector('.btn-complete-add');
 btnCompleteAdd.addEventListener('click', () => {
     // generate new id
-    const generateId = () => items[items.length-1].id + 1;    
+    const generateId = () => items[items.length - 1].id + 1;
     let brand = inpBrand.value;
     let price = inpPrice.value;
     let specifications = inpSpecifications.value;
     let color = inpColor.value;
     let imageLink = inpImageLink.value;
-    
-    let newProduct = product(generateId(), brand, specifications, price, color, imageLink);
-    
-    let updatedItems = [...items, newProduct];
 
-    try{
+    let product = new Product(generateId(), brand, specifications, price, color, imageLink);
+
+    let updatedItems = [...items, product];
+
+    try {
         localStorage.setItem('items', JSON.stringify(updatedItems));
         alert('Item successfully added')
         // update the table
@@ -133,7 +137,7 @@ btnCompleteAdd.addEventListener('click', () => {
         renderTableContent(updatedItems);
         displayTableContent();
     }
-    catch(e){
+    catch (e) {
         console.log(e);
         alert(e.message)
     }
