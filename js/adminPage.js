@@ -15,7 +15,9 @@ sortElement.addEventListener('click', () => {
     handleSortOrder();
 
     // sort by price
-    let sorted = ascending ? items.sort((a, b) => a.price - b.price) : items.sort((a, b) => b.price - a.price);
+    let sorted = ascending ? 
+        items.sort((a, b) => a.price - b.price):
+        items.sort((a, b) => b.price - a.price);
     renderTableContent(sorted);
 });
 

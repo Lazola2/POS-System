@@ -14,14 +14,15 @@ function removeCheckoutItem(item){
     checkoutContainer.innerHTML = ""
     // clear the checkout container
     renderCheckout();
-    displayCheckout();
+    // displayCheckout();
 }
 
 
 function renderCheckout() {
     // load the checkout content
-    checkoutData.forEach(checkoutItem => {
-        totalAmount += checkoutItem.price;
+    if (checkoutData.length !== 0) { 
+        checkoutData.forEach(checkoutItem => {
+            totalAmount += checkoutItem.price;
         let item = `
             <div class="checkout-item rounded-3  overflow-hidden my-3 d-flex align-items-center justify-content-between">
                 <img src="${checkoutItem.imageLink}" class="ms-3">
@@ -36,28 +37,22 @@ function renderCheckout() {
             </div>`
           // console.log(item)
         checkoutContainer.innerHTML += item;
-    }); 
-    checkoutContainer.innerHTML += 
-    `<div class="bg-info total-container">
-        ${totalAmount}
-    </div>
-    `
-}
-
-function displayCheckout() {
-    if (checkoutData.length !== 0) {    
-        renderCheckout();         
-        return;
+        })   
     }
-    checkoutContainer.innerHTML += 
+    else {
+        checkoutContainer.innerHTML = 
         `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-5 mt-3">
             <h1 class="text-white display-1 mt-5">No items on your checkout</h1>
             <i class="bi bi-emoji-frown text-white emoji"></i>
         </div>`
       
+    }    
+
 }
+
+
     
 // call the displayCheckout function on default
 document.addEventListener('DOMContentLoaded', () => {
-    displayCheckout();
+    renderCheckout();
 })

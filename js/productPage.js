@@ -30,15 +30,7 @@ const renderProducts = (_items_) =>{
                     <h5 class="card-title">${item.brand}</h5>
                     <h5 class="card-title">R${item.price}</h5>
                 </div>
-                <div class="name-and-price d-flex justify-content-between">
-                    <p class="quantity">Quantity</p>
-                    <div class="btn-group button-group rounded-1 overflow-hidden" role="group">
-                        <button type="button" class="bg-white lbl-quantity d-flex align-items-center justify-content-center border-0">${quantitySelected}</button>
-                        <button type="button" class="bg-white btn-increase d-flex align-items-center justify-content-center border-0 mx-1"
-                             onclick="handleQuantityIncrease(lblQuantity, ${quantitySelected})">+</button>
-                        <button type="button" class="bg-white btn-decrease d-flex align-items-center justify-content-center border-0">-</button>
-                    </div>
-                </div>
+                
                 <p class="card-text text-center">${item.specifications.toString()}</p>
                 <div class="button-holder d-flex justify-content-center">
                     <button class="btn add-btn w-50" onclick='addToCheckout(${JSON.stringify(item)})'>Add</button>

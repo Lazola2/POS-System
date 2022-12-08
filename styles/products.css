@@ -13,15 +13,18 @@ body {
 }
 
 .items-container {
-    min-height: 40vh;
+    min-height: 50vh;
 }
 
 .card-body {
     background-color: #020202e6;
     border-radius: 5px;
     margin: 3px;
-    height: 50%;
-    box-sizing: border-box;
+}
+
+.card {
+    height: auto;
+    min-height: 70%;
 }
 
 .button-group {
@@ -34,7 +37,7 @@ body {
 }
 
 .card-text {
-    height: 40%;
+    height: 50%;
     overflow-y: auto;
 }
 
