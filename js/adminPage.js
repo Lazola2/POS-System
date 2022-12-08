@@ -15,7 +15,7 @@ sortElement.addEventListener('click', () => {
     handleSortOrder();
 
     // sort by price
-    let sorted = ascending ? items.sort((a, b) => a.price - b.price) : items.sort((a, b) => b.price - a.price)
+    let sorted = ascending ? items.sort((a, b) => a.price - b.price) : items.sort((a, b) => b.price - a.price);
     renderTableContent(sorted);
 });
 
@@ -126,7 +126,6 @@ btnCompleteAdd.addEventListener('click', () => {
     let imageLink = inpImageLink.value;
 
     let product = new Product(generateId(), brand, specifications, price, color, imageLink);
-
     let updatedItems = [...items, product];
 
     try {
@@ -141,6 +140,7 @@ btnCompleteAdd.addEventListener('click', () => {
         console.log(e);
         alert(e.message)
     }
+    modalItem.style.display = 'none';
 });
 
 // cancel button on modal

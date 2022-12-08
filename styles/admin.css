@@ -80,6 +80,7 @@ table {
     grid-column: 2/4;
     display: flex;
     justify-content: space-between;
+    border: none;
 }
 
 .product-modal .button-holder .btn-complete-add,
