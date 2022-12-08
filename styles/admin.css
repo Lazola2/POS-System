@@ -26,12 +26,84 @@ table {
 /* modal */
 .product-modal{
     background-color: #2e2e2f;
-    height: 60%;
+    height: 65%;
     width: 25%;
-    display: grid;
+    margin-top: 15em;
+    padding-bottom: 2rem;
+    min-width: 400px;
+    display: none;
     grid-template-columns: 0.4fr 2.5fr 2.5fr 0.4fr;
-    grid-template-rows: 1fr .5fr 1fr 2fr repeat(2, 1fr) .5fr;
+    grid-template-rows: 1fr .6fr 2fr .7fr .7fr .5fr;
+    gap: 1rem;
+    box-shadow: 0 0 15px 5px black;
 }
+
+.product-modal h4 {
+    grid-column: 2/5;
+    text-align: center;
+    margin-top: auto;
+}
+
+.product-modal .brand-input {
+    grid-row: 2/3;
+    grid-column: 2/4;
+}
+
+.product-modal .specs-input {
+    grid-row: 3/4;
+    grid-column: 2/4;
+    resize: none;
+}
+
+.product-modal .price {
+    grid-row: 4/5;
+    grid-column: 2/3;
+    width: 100%;
+}
+
+.product-modal .color {
+    grid-row: 4/5;
+    grid-column: 3/4;
+}
+
+.product-modal .image-link {
+    grid-row: 5/6;
+    grid-column: 2/4;
+}
+
+.product-modal .button-holder {
+    grid-row: 6/7;
+    grid-column: 2/4;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-modal .button-holder .btn-complete-add,
+.product-modal .button-holder .btn-cancel {
+   height: 100%;
+}
+
+.product-modal .button-holder .btn-complete-add {
+    width: 60%;
+}
+
+.product-modal .button-holder .btn-cancel {
+    width: 35%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

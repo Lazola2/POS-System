@@ -56,8 +56,19 @@
                 </nav>
             </header>
             <main class="d-flex flex-column gap-4 justify-content-center align-items-center">
-                <div class="product-modal rounded-1 position-fixed">
-
+                <div class="product-modal rounded-1 position-fixed top-0">
+                    <h4 class="heading text-white">Create Product</h4>
+                    <input type="text" class="form-control brand-input" placeholder="Enter brand/name...">
+                    <textarea type="text" class="form-control specs-input"
+                        placeholder="Enter specifications separated by comma...">
+                    </textarea>
+                    <input type="number" class="form-control price" placeholder="price">
+                    <input type="text" class="form-control color" placeholder="color">
+                    <input type="url" class="form-control image-link" placeholder="paste the image link here">
+                    <div class="button-holder">
+                        <button class="btn btn-success btn-complete-add text-white fw-bold">Add new product</button>
+                        <button class="btn btn-danger btn-cancel text-white fw-bold">Cancel</button>
+                    </div>
                 </div>
                 
                 <!-- heading -->

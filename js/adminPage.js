@@ -40,8 +40,9 @@ const renderTableContent = () => {
                     </button>
                 </td>
             </tr>`
+            // tableBody.innerHTML += item;   
     });
-    tableBody.innerHTML += item;
+    
 }
 
 function displayTableContent() {
@@ -56,6 +57,70 @@ function displayTableContent() {
 
 }
 
-// call the displayCheckout function on default
-// displayTableContent();
+// modal script
 
+// creating a constructor function for a new product
+function product(_id_, _brand_, _specifications_, _price_, _color_, _imageLink_){
+    // properties of the product
+    return {
+        id :_id_,
+        brand: _brand_,
+        price: _price_,
+        specifications: _specifications_,
+        color: _color_,
+        imageLink: _imageLink_
+    }
+}
+
+// modal item
+
+// get the modal item
+let modalItem = document.querySelector('.product-modal');
+
+// get all the input data 
+let inpBrand = document.querySelector('.brand-input');
+let inpSpecifications = document.querySelector('.specs-input');
+let inpPrice = document.querySelector('.price');
+let inpColor = document.querySelector('.color');
+let inpImageLink = document.querySelector('.image-link');
+
+// show modal / add product button
+let btnAddProduct = document.querySelector('.btn-add-product');
+btnAddProduct.addEventListener('click', () => {
+    modalItem.style.display = 'grid';
+});
+
+// complete add button
+let btnCompleteAdd = document.querySelector('.btn-complete-add');
+btnCompleteAdd.addEventListener('click', () => {
+    // generate new id
+    const generateId = () => items[items.length-1].id + 1;    
+    let brand = inpBrand.value;
+    let price = inpPrice.value;
+    let specifications = inpSpecifications.value;
+    let color = inpColor.value;
+    let imageLink = inpImageLink.value;
+    let newProduct = product(generateId(), brand, specifications, price, color, imageLink);
+    
+    let updatedItems = [...items, newProduct];
+
+    try{
+        localStorage.setItem('items', JSON.stringify(updatedItems));
+        alert('Item successfully added')
+        // update the table
+        tableBody.innerHTML = '';
+        renderTableContent();
+        displayTableContent();
+    }
+    catch(e){
+        console.log(e);
+        alert(e.message)
+    }
+});
+
+// cancel button on modal
+let btnCancel = document.querySelector('.btn-cancel');
+btnCancel.addEventListener('click', () => {
+    // alert('cancel button clicked');
+    modalItem.style.display = 'none';
+});
