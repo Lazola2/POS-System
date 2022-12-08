@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding: 0 20rem;
+    padding: 5rem 15rem;
 }
 
 .items-container {
