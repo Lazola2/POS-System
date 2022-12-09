@@ -2,7 +2,7 @@ Date: 6 December 2022
 Time: 23:06
 Author: Lazola Makubalo
 
-Note: Managed to add an item to the checkout when the user clicks on the 
+Note: Managed to add an item to the checkout when thve user clicks on the 
 add button on the products page.
 
 Tasks for tomorrow: 
