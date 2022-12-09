@@ -25,7 +25,7 @@
 </head>
 
 <body style="height: 100vh; width: 100%;">
-    <!-- modal -->
+
     <div class="website-container w-100 h-100 p-0">
         <section class="product-section w-100 h-100">
             <header class="d-flex justify-content-between">
@@ -56,6 +56,7 @@
                 </nav>
             </header>
             <main class="d-flex flex-column gap-4 justify-content-center align-items-center">
+                <!-- create product modal -->
                 <div class="product-modal rounded-1 position-fixed top-0">
                     <h4 class="heading text-white">Create Product</h4>
                     <input type="text" class="form-control brand-input" placeholder="Enter brand/name...">
@@ -68,6 +69,22 @@
                     <div class="button-holder h-100">
                         <button class="btn btn-success btn-complete-add text-white fw-bold">Add new product</button>
                         <button class="btn btn-danger btn-cancel text-white fw-bold">Cancel</button>
+                    </div>
+                </div>
+
+                <!-- update product modal -->
+                <div class="product-modal-update rounded-1 position-fixed top-0">
+                    <h4 class="heading text-white">Update Product</h4>
+                    <input type="text" class="form-control brand-input-update" placeholder="Enter brand/name...">
+                    <textarea type="text" class="form-control specs-input-update"
+                        placeholder="Enter specifications separated by comma...">
+                    </textarea>
+                    <input type="number" class="form-control price-update" placeholder="price">
+                    <input type="text" class="form-control color-update" placeholder="color">
+                    <input type="url" class="form-control image-link-update" placeholder="paste the image link here">
+                    <div class="button-holder-update h-100">
+                        <button class="btn btn-success btn-complete-update text-white fw-bold">Update product</button>
+                        <button class="btn btn-danger btn-cancel-update text-white fw-bold">Cancel</button>
                     </div>
                 </div>
                 
@@ -96,7 +113,7 @@
                     <tbody class="table-body"></tbody>
                 </table>
             </main>
-            <footer class="h-50 pt-4 mt-5">
+            <footer class="h-auto pt-4 mt-5">
                 <div class="contacts ps-3">
                     <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Contact Us</p>
                     <div class="items text-white">
@@ -149,10 +166,7 @@
                         </div>
                     </div>
                 </div>
-                <form class="message row px-5">
-                    <input class="col-10 fs-5 border-0 ps-5" type="text" placeholder="send us a message...">
-                    <button class="bg-primary col-2 border-0 fs-5 text-white">Send</button>
-                </form>
+               
                 <p class="copyright text-white text-center mt-2">&copy;copyright 2022</p>
             </footer>
         </section>

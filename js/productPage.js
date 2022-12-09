@@ -12,6 +12,7 @@ const addToCheckout = (checkoutItem) => {
 
 // load products into the products page
 const renderProducts = (_items_) =>{ 
+    itemsContainer.innerHTML =  "";
     let quantitySelected = 1;
 
     _items_.length === 0 ?
@@ -42,7 +43,6 @@ const renderProducts = (_items_) =>{
 }
 
 document.addEventListener('DOMContentLoaded', () => {  
-    itemsContainer.innerHTML = "";
     renderProducts(items);
 });
 
@@ -67,7 +67,6 @@ btnFilter.addEventListener('click', (e) => {
             finalFilter.push(item);
         }
     });
-    itemsContainer.innerHTML = "";
     console.log(finalFilter);
     renderProducts(finalFilter);
 });

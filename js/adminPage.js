@@ -10,6 +10,7 @@ const handleSortOrder = () => {
         '<i class="bi bi-sort-numeric-up"></i>'
 }
 handleSortOrder();
+
 sortElement.addEventListener('click', () => {
     ascending = !ascending;
     handleSortOrder();
@@ -18,10 +19,13 @@ sortElement.addEventListener('click', () => {
     let sorted = ascending ? 
         items.sort((a, b) => a.price - b.price):
         items.sort((a, b) => b.price - a.price);
+
+    // render the table content that is sorted 
     renderTableContent(sorted);
 });
 
 document.addEventListener('DOMContentLoaded', () => {
+    // when the DOM loads, render the table content for all items
     renderTableContent(items);
 });
 
@@ -34,12 +38,7 @@ const handleDelete = (item) => {
     // update the table
     tableBody.innerHTML = '';
     renderTableContent(updatedData);
-    displayTableContent();
-}
-
-// handle the event for the edit button
-const handleEdit = () => {
-    alert('Edit button clicked');
+    displayTableContent(updatedData);
 }
 
 const renderTableContent = (_items_) => {
@@ -53,8 +52,8 @@ const renderTableContent = (_items_) => {
                 <td>${item.price}</td>
                 <td>${item.specifications.toString()}</td>
                 <td class="d-flex gap-2">
-                    <button class="rounded-1 btn-primary border-0 bg-primary text-white" onclick="handleEdit()">
-                        <i class="bi bi-pencil"></i>
+                    <button class="rounded-1 btn-primary border-0 bg-primary text-white" onclick='showEditModal(${JSON.stringify(item)})'>
+                        <i class="bi bi-pencil pencil"></i>
                     </button>
                     <button class="rounded-1 btn-danger border-0 bg-danger text-white" onclick='handleDelete(${JSON.stringify(item)})'>
                         <i class="bi bi-trash3"></i>
@@ -66,10 +65,10 @@ const renderTableContent = (_items_) => {
 
 }
 
-function displayTableContent() {
+function displayTableContent(data) {
     try {
         document.addEventListener('DOMContentLoaded', () => {
-            renderTableContent(items);
+            renderTableContent(data);
         });
     }
     catch (e) {
@@ -79,9 +78,8 @@ function displayTableContent() {
 }
 
 // modal script
-
 // creating a constructor function for a new product
-function Product(id, brand, specifications, price, color, imageLink) {
+function Product(id, brand, price, specifications, color, imageLink) {
     // properties of the product
     this.id = id;
     this.brand = brand.split(' ')[0];
@@ -114,6 +112,7 @@ let inpImageLink = document.querySelector('.image-link');
 let btnAddProduct = document.querySelector('.btn-add-product');
 btnAddProduct.addEventListener('click', () => {
     modalItem.style.display = 'grid';
+    inpSpecifications.value = "";
 });
 
 // complete add button
@@ -127,7 +126,7 @@ btnCompleteAdd.addEventListener('click', () => {
     let color = inpColor.value;
     let imageLink = inpImageLink.value;
 
-    let product = new Product(generateId(), brand, specifications, price, color, imageLink);
+    let product = new Product(generateId(), brand, price, specifications, color, imageLink);
     let updatedItems = [...items, product];
 
     try {
@@ -136,7 +135,7 @@ btnCompleteAdd.addEventListener('click', () => {
         // update the table
         tableBody.innerHTML = '';
         renderTableContent(updatedItems);
-        displayTableContent();
+        displayTableContent(updatedItems);
     }
     catch (e) {
         console.log(e);
@@ -148,6 +147,61 @@ btnCompleteAdd.addEventListener('click', () => {
 // cancel button on modal
 let btnCancel = document.querySelector('.btn-cancel');
 btnCancel.addEventListener('click', () => {
-    // alert('cancel button clicked');
     modalItem.style.display = 'none';
+});
+
+// update modal
+// get all the input data 
+let inpBrandUpdate = document.querySelector('.brand-input-update');
+let inpSpecificationsUpdate = document.querySelector('.specs-input-update');
+let inpPriceUpdate = document.querySelector('.price-update');
+let inpColorUpdate = document.querySelector('.color-update');
+let inpImageLinkUpdate = document.querySelector('.image-link-update');
+
+// show modal / add product button
+// handle the event for the edit button
+let productModalUpdate = document.querySelector('.product-modal-update');
+let itemToUpdate;
+const showEditModal = (item) => {  
+   inpBrandUpdate.value = item.brand;
+   inpSpecificationsUpdate.value = item.specifications;
+   inpPriceUpdate.value = item.price;
+   inpColorUpdate.value = item.color;
+   inpImageLinkUpdate.value = item.imageLink;
+   productModalUpdate.style.display = 'grid';
+   itemToUpdate = item;
+}
+
+// cancel button on modal
+let btnCancelUpdate = document.querySelector('.btn-cancel-update');
+btnCancelUpdate.addEventListener('click', () => {
+    productModalUpdate.style.display = 'none';
+});
+
+// cancel button on modal
+let btnUpdate = document.querySelector('.btn-complete-update');
+btnUpdate.addEventListener('click', () => {
+    let updated = [...items];
+    for (let i = 0; i < updated.length; i++){
+        if (updated[i].id == itemToUpdate.id){ 
+            let newItem = {
+                id: updated[i].id,
+                brand: inpBrandUpdate.value,
+                price :inpPriceUpdate.value,
+                specifications: inpSpecificationsUpdate.value.split(','),
+                color: inpColorUpdate.value,
+                imageLink: inpImageLinkUpdate.value
+            }
+            items[i] = newItem;
+            console.log(items);
+        }
+    }
+
+    items.forEach(item => {
+        console.log(item.price)   
+    })
+    localStorage.setItem('items', JSON.stringify(items));
+    renderTableContent(items);
+    displayTableContent(items);
+    productModalUpdate.style.display = 'none';
 });

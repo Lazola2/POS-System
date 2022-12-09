@@ -12,6 +12,17 @@ body {
     width: 70%;
 }
 
+.checkout-total {
+    background: rgba(0, 0, 0, 0.6);
+    height: 10em;
+    width: 70%;
+}
+
+.checkout-total .display-total {
+    font-size: 25px;
+    font-weight: bolder;
+}
+
 .total-container{
     background: #fff;
     height: 5em;
@@ -49,3 +60,4 @@ body {
 .message-holder {
     background-color: rgba(0, 0, 0, 0.484);
 }
+

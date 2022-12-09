@@ -28,7 +28,7 @@ table {
 }
 
 /* modal */
-.product-modal{
+.product-modal, .product-modal-update{
     background-color: #2e2e2f;
     height: 65%;
     width: 25%;
@@ -42,40 +42,47 @@ table {
     box-shadow: 0 0 15px 5px black;
 }
 
-.product-modal h4 {
+.product-modal h4
+,.product-modal-update h4 {
     grid-column: 2/5;
     text-align: center;
     margin-top: auto;
 }
 
-.product-modal .brand-input {
+.product-modal .brand-input,
+.product-modal-update .brand-input-update {
     grid-row: 2/3;
     grid-column: 2/4;
 }
 
-.product-modal .specs-input {
+.product-modal .specs-input,
+.product-modal-update .specs-input-update {
     grid-row: 3/4;
     grid-column: 2/4;
     resize: none;
 }
 
-.product-modal .price {
+.product-modal .price,
+.product-modal-update .price-update {
     grid-row: 4/5;
     grid-column: 2/3;
     width: 100%;
 }
 
-.product-modal .color {
+.product-modal .color,
+.product-modal-update .color-update {
     grid-row: 4/5;
     grid-column: 3/4;
 }
 
-.product-modal .image-link {
+.product-modal .image-link,
+.product-modal-update .image-link-update {
     grid-row: 5/6;
     grid-column: 2/4;
 }
 
-.product-modal .button-holder {
+.product-modal .button-holder
+,.product-modal-update .button-holder-update {
     grid-row: 6/7;
     grid-column: 2/4;
     display: flex;
@@ -84,15 +91,19 @@ table {
 }
 
 .product-modal .button-holder .btn-complete-add,
-.product-modal .button-holder .btn-cancel {
+.product-modal-update .button-holder-update .btn-complete-update,
+.product-modal .button-holder .btn-cancel,
+.product-modal-update .button-holder-update .btn-cancel-update {
    height: 100%;
 }
 
-.product-modal .button-holder .btn-complete-add {
+.product-modal .button-holder .btn-complete-add,
+.product-modal-update .button-holder-update .btn-complete-update {
     width: 60%;
 }
 
-.product-modal .button-holder .btn-cancel {
+.product-modal .button-holder .btn-cancel,
+.product-modal-update .button-holder-update .btn-cancel-update {
     width: 35%;
 }
 

@@ -65,15 +65,16 @@ main button {
         padding: 0 !important;
     }
 
+    
+
     header nav{
         display: flex;
         flex-direction: column;
-        background: rgba(0, 0, 0, 0.863);
+        background: white;
         position: absolute;
         width: 100%;
-        height: 50%;
+        height: auto;
         align-items: flex-start;
-        
     }
 
     header nav li {

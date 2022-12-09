@@ -38,19 +38,24 @@
 
                 <!-- navbar in the header -->
                 <nav class="navigation d-flex justify-content-lg-between align-items-center text-primary list-unstyled">
-                    <a href="../index.html">
+                    <a class="nav-links" href="../index.html">
                         <li class="px-2">Home</li>
                     </a>
-                    <a href="#" class="text-decoration-none">
+                    <a class="nav-links" href="#" class="text-decoration-none">
                         <li class="px-2">Products</li>
                     </a>
-                    <a href="../html/checkout.html">
+                    <a class="nav-links" href="../html/checkout.html">
                         <li class="px-2">Checkout</li>
                     </a>
-                    <a href="../html/admin.html">
+                    <a class="nav-links" href="../html/admin.html">
                         <li class="px-2">Admin</li>
                     </a>
+                    <div class="close-button position-absolute fs-1 text-black">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
                 </nav>
+             
+            
             </header>
             <main class="d-flex flex-column gap-4">
                 <!-- heading -->
@@ -59,7 +64,7 @@
                 <!-- filter container -->
                 <div class="filter-container py-3 gap-2 ">
                     <h5 class="text-white">Filter</h5>
-                    <form action="" class="filter d-flex gap-2">
+                    <form action="" class="filter d-flex gap-2 flex-column flex-md-row">
                         <!-- brand filter -->
                         <select class="form-select brand-select" aria-placeholder="brand">
                             <option value="Lenovo">Lenovo</option>
@@ -92,9 +97,9 @@
 
                 <div class="container items-container pt-5 justify-content-center d-flex flex-wrap gap-5"></div>
             </main>
-            <footer class="h-50 pt-4 mt-5">
-                <div class="contacts ps-3">
-                    <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Contact Us</p>
+            <footer class="h-auto pt-4 mt-5">
+                <div class="contacts ps-3 ">
+                    <p class="heading text-center fw-normal fs-5 mt-1  text-primary lead">Contact Us</p>
                     <div class="items text-white">
                         <div class="item d-flex">
                             <i class="bi bi-telephone ms-3 me-4"></i>
@@ -115,7 +120,7 @@
                     </div>
                 </div>
                 <div class="address">
-                    <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Address</p>
+                    <p class="heading text-center fw-normal fs-5 mt-1 text-primary lead">Address</p>
                     <div class="items text-white">
                         <div class="item d-flex justify-content-center">
                             <p>312 Elon St.</p>
@@ -132,7 +137,7 @@
                     </div>
                 </div>
                 <div class="trading-hours">
-                    <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Trading Hours</p>
+                    <p class="heading text-center fw-normal fs-5 mt-1 text-primary lead">Trading Hours</p>
                     <div class="items text-white">
                         <div class="item d-flex justify-content-center">
                             <p>Mon-Fri: 07:00 - 19:00</p>
@@ -145,14 +150,14 @@
                         </div>
                     </div>
                 </div>
-                <form class="message row px-5">
-                    <input class="col-10 fs-5 border-0 ps-5" type="text" placeholder="send us a message...">
-                    <button class="bg-primary col-2 border-0 fs-5 text-white">Send</button>
-                </form>
+               
                 <p class="copyright text-white text-center mt-2">&copy;copyright 2022</p>
             </footer>
         </section>
     </div>
+
+    <!-- scripts -->
+    <script src="../js/header.js"></script>
 </body>
 
 </html>
