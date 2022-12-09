@@ -76,8 +76,8 @@ function renderCheckout() {
             `<div class="checkout-total rounded-3 text-white d-flex flex-column justify-content-center ps-5">
                 <p class="display-total">Amount due: R${getTotalAmount()}</p>
                 <div class="checkout-buttons d-flex gap-3">
-                    <button class="btn btn-success proceed-checkout" onclick="handleProceedToCheckout()">Proceed to checkout</button>
-                    <button class="btn btn-danger clear-checkout" onclick="handleClearCheckout()">Clear checkout</button>
+                    <button class="btn btn-success proceed-checkout" onclick="handleProceedToCheckout()">Proceed</button>
+                    <button class="btn btn-danger clear-checkout" onclick="handleClearCheckout()">Clear</button>
                 </div>
             </div>`
     }

@@ -61,3 +61,51 @@ body {
     background-color: rgba(0, 0, 0, 0.484);
 }
 
+
+@media screen and (max-width: 990px) {
+    .checkout-item {
+        width: 90%
+    }
+}
+
+@media screen and (max-width: 760px) {  
+    .checkout-total {
+        width: 60%;
+        margin-bottom: 3rem;  
+    }
+    
+    .display-total {
+        font-size: 20px !important;  
+    }
+    
+    .checkout-item {
+        height: auto;
+        flex-direction: column;
+        width :60%;
+        align-items: center !important;
+        padding: 1rem
+    }
+
+    .checkout-item img {
+
+        height: 15rem;
+        width: 15rem;
+    }
+
+    .content-holder {
+        height: 15rem;
+        width: 100%;
+        flex-direction: column;     
+        justify-content: center !important;
+        gap: 1rem
+    }
+
+    .content-holder button {
+        width: 80%;
+        margin-bottom: 1rem;
+    }
+
+    .content-holder .content {
+        height: auto;
+    }
+}
