@@ -21,13 +21,16 @@
     <link rel="stylesheet" href="../styles/header.css">
     <link rel="stylesheet" href="../styles/footer.css">
 </head>
-
+<!--  -->
 <body style="height: 100vh; width: 100%;">
     <div class="website-container w-100 h-100 p-0">
         <section class="product-section w-100 h-100">
-            <header class="d-flex justify-content-between">
+            <header class="d-flex justify-content-between container-fluid">
                 <!-- menu bar -->
-                <i class="bi bi-list"></i>
+                <div class="menu-icon d-md-none d-block">
+                    <i class="bi bi-list"></i>
+                </div>
+                
                 <!-- logo in the header -->
                 <div class="logo text-white d-flex align-items-center">
                     <h2 class="logo h-100 d-flex align-items-center mt-2">CODE</h2>
@@ -39,7 +42,7 @@
                 </div>
 
                 <!-- navbar in the header -->
-                <nav class="navigation d-flex justify-content-lg-between align-items-center text-primary list-unstyled">
+                <nav class="navigation removed d-flex justify-content-lg-between align-items-center text-primary list-unstyled">
                     <a class="nav-links" href="../index.html">
                         <li class="px-2">Home</li>
                     </a>
@@ -52,7 +55,7 @@
                     <a class="nav-links" href="../html/admin.html">
                         <li class="px-2">Admin</li>
                     </a>
-                    <div class="close-button position-absolute fs-1 text-black">
+                    <div class="close-button text-black d-md-none d-block">
                         <i class="bi bi-x-lg"></i>
                     </div>
                 </nav>
@@ -98,7 +101,7 @@
 
                 <div class="container items-container pt-5 justify-content-center d-flex flex-wrap gap-5"></div>
             </main>
-            <footer class="h-auto pt-4 mt-5">
+            <footer class="h-auto pt-4">
                 <div class="contacts ps-3 ">
                     <p class="heading text-center fw-normal fs-5 mt-1  text-primary lead">Contact Us</p>
                     <div class="items text-white">

@@ -20,7 +20,12 @@
 
 <body>
     <div class="website-container w-100 h-100 p-0">
-        <header class="d-flex justify-content-between">
+        <header class="d-flex justify-content-between container-fluid">
+            <!-- menu bar -->
+            <div class="menu-icon d-md-none d-block">
+                <i class="bi bi-list"></i>
+            </div>
+            
             <!-- logo in the header -->
             <div class="logo text-white d-flex align-items-center">
                 <h2 class="logo h-100 d-flex align-items-center mt-2">CODE</h2>
@@ -32,20 +37,24 @@
             </div>
 
             <!-- navbar in the header -->
-            <nav class="navigation d-flex justify-content-lg-between align-items-center text-primary list-unstyled">
-                <a href="../index.html">
+            <nav class="navigation removed d-flex justify-content-lg-between align-items-center text-primary list-unstyled">
+                <a class="nav-links" href="../index.html">
                     <li class="px-2">Home</li>
                 </a>
-                <a href="../html/products.html" class="text-decoration-none">
+                <a class="nav-links" href="#" class="text-decoration-none">
                     <li class="px-2">Products</li>
                 </a>
-                <a href="#">
+                <a class="nav-links" href="../html/checkout.html">
                     <li class="px-2">Checkout</li>
                 </a>
-                <a href="../html/admin.html">
+                <a class="nav-links" href="../html/admin.html">
                     <li class="px-2">Admin</li>
                 </a>
+                <div class="close-button text-black d-md-none d-block">
+                    <i class="bi bi-x-lg"></i>
+                </div>
             </nav>
+         
         </header>
         
         <!-- main content -->
@@ -54,9 +63,9 @@
             <h1 class="text-center fs-1 fw-bolder text-white my-5">Checkout</h1>
             <div class="container checkout-container h-75 d-flex align-items-center flex-column"></div>
         </main>
-        <footer class="h-auto pt-4 mt-5">
-            <div class="contacts ps-3">
-                <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Contact Us</p>
+        <footer class="h-auto pt-4">
+            <div class="contacts ps-3 ">
+                <p class="heading text-center fw-normal fs-5 mt-1  text-primary lead">Contact Us</p>
                 <div class="items text-white">
                     <div class="item d-flex">
                         <i class="bi bi-telephone ms-3 me-4"></i>
@@ -77,7 +86,7 @@
                 </div>
             </div>
             <div class="address">
-                <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Address</p>
+                <p class="heading text-center fw-normal fs-5 mt-1 text-primary lead">Address</p>
                 <div class="items text-white">
                     <div class="item d-flex justify-content-center">
                         <p>312 Elon St.</p>
@@ -94,7 +103,7 @@
                 </div>
             </div>
             <div class="trading-hours">
-                <p class="heading text-center fw-normal fs-5 mt-1 text-white lead">Trading Hours</p>
+                <p class="heading text-center fw-normal fs-5 mt-1 text-primary lead">Trading Hours</p>
                 <div class="items text-white">
                     <div class="item d-flex justify-content-center">
                         <p>Mon-Fri: 07:00 - 19:00</p>
@@ -107,13 +116,13 @@
                     </div>
                 </div>
             </div>
-            <form class="message row px-5">
-                <input class="col-10 fs-5 border-0 ps-5" type="text" placeholder="send us a message...">
-                <button class="bg-primary col-2 border-0 fs-5 text-white">Send</button>
-            </form>
+           
             <p class="copyright text-white text-center mt-2">&copy;copyright 2022</p>
         </footer>
     </div>
+
+    <!-- scripts -->
+    <script src="../js/header.js"></script>
 </body>
 
 </html>
