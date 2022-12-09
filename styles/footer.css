@@ -32,4 +32,11 @@ footer .copyright {
         gap: 1rem;
     }
 
+    .contacts .items .item {
+        display: flex;
+        flex-direction: column;
+    
+        align-items: center;
+    }
+
 }
