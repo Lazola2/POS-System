@@ -1,6 +1,5 @@
 let items = JSON.parse(localStorage.getItem('items'));
 let tableBody = document.querySelector('.table-body');
-let btnSort = document.querySelector('.btn-sort');
 
 // sorting 
 let ascending = true;
@@ -11,19 +10,6 @@ const handleSortOrder = () => {
         '<i class="bi bi-sort-numeric-up"></i>'
 }
 handleSortOrder();
-
-btnSort.addEventListener('click', () => {
-    ascending = !ascending;
-    handleSortOrder();
-
-    // sort by price
-    let sorted = ascending ? 
-        items.sort((a, b) => a.price - b.price):
-        items.sort((a, b) => b.price - a.price);
-
-    // render the table content that is sorted 
-    renderTableContent(sorted);
-});
 
 sortElement.addEventListener('click', () => {
     ascending = !ascending;
@@ -61,10 +47,11 @@ const renderTableContent = (_items_) => {
     _items_.forEach(item => {
         tableBody.innerHTML +=
             `<tr class="table-row">
+                <th scope="row">${items.indexOf(item) + 1}</th>
                 <td>${item.brand}</td>
                 <td>${item.price}</td>
                 <td>${item.specifications.toString()}</td>
-                <td class="d-flex gap-2 border-none">
+                <td class="d-flex gap-2">
                     <button class="rounded-1 btn-primary border-0 bg-primary text-white" onclick='showEditModal(${JSON.stringify(item)})'>
                         <i class="bi bi-pencil pencil"></i>
                     </button>

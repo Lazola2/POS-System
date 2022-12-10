@@ -11,6 +11,7 @@ body {
     overflow-x: hidden;
     width: 100vw;
     scroll-margin-top: 10vh;
+    background: rgba(0, 0, 0, 1);
 }
 
 .landing-section {

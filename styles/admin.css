@@ -22,7 +22,7 @@ table {
     width: 15%;
 }
 
-.btn-add-product {
+.btn-add-product, .btn-sort{
     background-color: #4B7CDB;
     font-weight: bolder;
 }
@@ -118,10 +118,17 @@ table {
     padding: 0 5px;
 }
 
+@media screen and (max-width: 500px) {
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
 
-
-
-
+    .buttons button {
+        margin: 0 !important;
+    }
+}
 
 
 

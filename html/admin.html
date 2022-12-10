@@ -25,48 +25,49 @@
 </head>
 
 <body style="height: 100vh; width: 100%;">
-    <div class="website-container w-100 h-100">
+
+    <div class="website-container w-100 h-100 p-0">
         <section class="product-section w-100 h-100">
-            <nav class="navbar navbar-expand-lg container-fluid">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <!-- logo in the header -->
-                        <div class="logo text-white d-flex align-items-center">
-                            <h2 class="logo h-100 d-flex align-items-center mt-2">CODE
-                                <span>
-                                    <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
-                                    <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
-                                    <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
-                                </span>
-                            </h2>
-                        </div>
-                    </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" 
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon">
-                            <i class="bi bi-list text-primary fs-1"></i> 
-                        </span>
-                    </button>
-                    <div class="collapse navbar-collapse bg-black rounded-3 w-100 m-0 collapsed-nav" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 nav-links">
-                            <a class="nav-links text-decoration-none" href="../index.html">
-                                <li class="px-2 py-3 text-center">Home</li>
-                            </a>
-                            <a class="nav-links text-decoration-none" href="products.html" class="text-decoration-none">
-                                <li class="px-2 py-3 text-center">Products</li>
-                            </a>
-                            <a class="nav-links text-decoration-none" href="checkout.html">
-                                <li class="px-2 py-3 text-center">Checkout</li>
-                            </a>
-                            <a class="nav-links text-decoration-none" href="admin.html">
-                                <li class="px-2 py-3 text-center">Admin</li>
-                            </a>
-                        </ul>
-    
+           <nav class="navbar navbar-expand-lg container-fluid p-0">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <!-- logo in the header -->
+                    <div class="logo text-white d-flex align-items-center">
+                        <h2 class="logo h-100 d-flex align-items-center mt-2">CODE
+                            <span>
+                                <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
+                                <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
+                                <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
+                            </span>
+                        </h2>
                     </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" 
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="bi bi-list text-primary fs-1"></i> 
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse bg-lg-black rounded-3 w-100 m-0 collapsed-nav" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto w-100 text-end mb-2 mb-lg-0 nav-links d-flex justify-content-end px-4">
+                        <a class="nav-links text-decoration-none mx-4" href="../index.html">
+                            <li class="px-2 py-3 text-center">Home</li>
+                        </a>
+                        <a class="nav-links text-decoration-none mx-4" href="products.html" class="text-decoration-none">
+                            <li class="px-2 py-3 text-center">Products</li>
+                        </a>
+                        <a class="nav-links text-decoration-none mx-4" href="checkout.html">
+                            <li class="px-2 py-3 text-center">Checkout</li>
+                        </a>
+                        <a class="nav-links text-decoration-none mx-4" href="#">
+                            <li class="px-2 py-3 text-center">Admin</li>
+                        </a>
+                    </ul>
+
                 </div>
-            </nav>
+            </div>
+        </nav>
             <main class="d-flex flex-column gap-4 justify-content-center align-items-center">
                 <!-- create product modal -->
                 <div class="product-modal rounded-1 position-fixed top-0">
@@ -104,20 +105,38 @@
                 <h1 class="text-center fs-1 fw-bolder text-white mt-5">Admin</h1>
 
                 <!-- button to add a new item -->
-                <div class="buttons">
+                <div class="buttons d-flex gap-3">
                     <button class="btn btn-primary btn-add-product py-2 my-3 mb-5 px-5" data-bs-toggle="modal" data-bs-target="#modal">
                         ADD NEW ITEM
                     </button>
-                    <button class="btn btn-primary btn-add-product py-2 my-3 mb-5 px-5" data-bs-toggle="modal" data-bs-target="#modal">
-                        Sort
+                    <button class="btn btn-primary btn-sort py-2 my-3 mb-5 px-5 d-flex justify-content-center" data-bs-toggle="modal" data-bs-target="#modal">
+                        SORT
+                        <div class="sort-element fw-bolder"></div>
                     </button>
                 </div>
                 
-                <!-- container for the items -->
-                <div class="items-container bg-danger h-100 w-100">
-                    f
-                </div>
                 
+
+                <!-- table -->
+                <table class="table text-white w-75 rounded-3 overflow-hidden">
+                    <thead>
+                        <tr class="table-row table-head-row">
+                            <th scope="col" class="brand">BRAND</th>
+                            <th scope="col" class="price d-flex">
+                                PRICE
+                                
+                            </th>
+                            <th scope="col" class="specifications">SPECIFICATIONS</th>
+                            <th scope="col" class="actions">ACTION</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body"></tbody>
+                </table>
+
+                <!-- container for displaying items -->
+                <div class="items-container bg-danger w-100 h-50">
+
+                </div>
             </main>
             <footer class="h-auto pt-4">
                 <div class="contacts ps-3 ">
@@ -176,8 +195,9 @@
                 <p class="copyright text-white text-center mt-2">&copy;copyright 2022</p>
             </footer>
         </section>
+
     </div>
-    <!-- <script src="../js/header.js"></script> -->
+    <script src="../js/header.js"></script>
 </body>
 
 </html>

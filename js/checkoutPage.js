@@ -11,7 +11,7 @@ const handleProceedToCheckout = () => {
 
     // display a checkout message to the user
     checkoutContainer.innerHTML =
-        `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-5 mt-3">
+        `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-2 mt-3">
             <h1 class="text-white display-1 mt-5">Thank you for shopping with us!</h1>
             <i class="bi bi-emoji-smile emoji text-white"></i>
         </div>`
@@ -56,17 +56,16 @@ function renderCheckout() {
         checkoutData.forEach(checkoutItem => {
             let item = `
             <div class="checkout-item rounded-3  overflow-hidden my-3 d-flex align-items-center justify-content-between">
-                <img src="${checkoutItem.imageLink}" class="ms-3">
+                <img src="${checkoutItem.imageLink}" class=" checkout-image">
                 <div class="bg-dark content-holder me-1 rounded-2 overflow-hidden d-flex align-items-center justify-content-between">
                     <div class="content ms-2 me-2 rounded-1 text-white ps-3">
                         <p class=" mb-1brand p-0 m-0 fw-bold fs-5 mb-2">${checkoutItem.brand}</p>
                         <p class=" mb-1specifications p-0 m-0">Specification: ${checkoutItem.specifications}</p>
                         <p class=" mb-1total p-0 m-0">Price: R${checkoutItem.price}</p>
                     </div>
-                    <button class="btn btn-danger btn-remove me-4" onclick='removeCheckoutItem(${JSON.stringify(checkoutItem)})'>Remove</button>
+                    <button class="btn btn-danger btn-remove me-lg-4" onclick='removeCheckoutItem(${JSON.stringify(checkoutItem)})'>Remove</button>
                 </div>
             </div>`
-            // console.log(item)
             checkoutContainer.innerHTML += item;
         })
 
@@ -83,11 +82,10 @@ function renderCheckout() {
     }
     else {
         checkoutContainer.innerHTML =
-            `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-5 mt-3">
-            <h1 class="text-white display-1 mt-5">No items on your checkout</h1>
-            <i class="bi bi-emoji-frown text-white emoji"></i>
-        </div>`
-
+            `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-2 my-5">
+                <h1 class="text-white display-1 mt-5">No items on your checkout</h1>
+                <i class="bi bi-emoji-frown text-white emoji"></i>
+            </div>`
     }
 
 }

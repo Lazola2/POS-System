@@ -4,6 +4,7 @@ footer {
     display: grid;
     grid-template-columns: 1fr repeat(3, 2.5fr) 1fr;
     grid-template-rows: 4fr 1fr 0.8fr;
+    margin-top: 1rem;
 }
 
 footer .contacts {

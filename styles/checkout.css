@@ -3,6 +3,10 @@ body {
     height: 100vh;
 }
 
+.proceed-checkout, .clear-checkout {
+    width: 40%;
+}
+
 .checkout-container {
     height: 100%;
 }
@@ -15,8 +19,9 @@ body {
 
 .checkout-total {
     background: rgba(0, 0, 0, 0.6);
-    height: 10em;
+    height: auto;
     width: 70%;
+    padding: 1rem;
 }
 
 .checkout-total .display-total {
@@ -69,7 +74,6 @@ body {
     }
 
     .checkout-total {
-        
         margin-bottom: 3rem;  
     }
     
@@ -101,9 +105,27 @@ body {
     .content-holder button {
         width: 80%;
         margin-bottom: 1rem;
-    }
+}
 
     .content-holder .content {
         height: auto;
     }
+}
+
+@media screen and (max-width: 500px){
+    .checkout-total{
+        width: 80%;
+        height: auto;
+    }
+
+    .checkout-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: .4rem;
+    }
+
+    .proceed-checkout, .clear-checkout {
+        width: 80%;
+    }
+    
 }
