@@ -1,9 +1,10 @@
 body {
     background-color: #2e2e2f;
+    height: 100vh;
 }
 
 .checkout-container {
-    min-height: 90vh;
+    height: 100%;
 }
 
 .checkout-item{
@@ -61,16 +62,14 @@ body {
     background-color: rgba(0, 0, 0, 0.484);
 }
 
-
-@media screen and (max-width: 990px) {
+@media screen and (max-width: 720px) {
     .checkout-item {
-        width: 90%
+        width: 288px;
+        height: 363.35px;
     }
-}
 
-@media screen and (max-width: 760px) {  
     .checkout-total {
-        width: 60%;
+        
         margin-bottom: 3rem;  
     }
     
@@ -81,13 +80,12 @@ body {
     .checkout-item {
         height: auto;
         flex-direction: column;
-        width :60%;
+        width : 90%;
         align-items: center !important;
         padding: 1rem
     }
 
     .checkout-item img {
-
         height: 15rem;
         width: 15rem;
     }

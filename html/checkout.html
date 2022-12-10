@@ -20,49 +20,57 @@
 
 <body>
     <div class="website-container w-100 h-100 p-0">
-        <header class="d-flex justify-content-between container-fluid">
-            <!-- menu bar -->
-            <div class="menu-icon d-md-none d-block">
-                <i class="bi bi-list"></i>
-            </div>
-            
-            <!-- logo in the header -->
-            <div class="logo text-white d-flex align-items-center">
-                <h2 class="logo h-100 d-flex align-items-center mt-2">CODE</h2>
-                <div class="dots d-flex align-items-center ps-1">
-                    <li class="bg-primary rounded-5 circles mx-1 list-unstyled"></li>
-                    <li class="bg-primary rounded-5 circles mx-1 list-unstyled"></li>
-                    <li class="bg-primary rounded-5 circles mx-1 list-unstyled"></li>
-                </div>
-            </div>
+        <nav class="navbar navbar-expand-lg container-fluid  p-0">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <!-- logo in the header -->
+                    <div class="logo text-white d-flex align-items-center">
+                        <h2 class="logo h-100 d-flex align-items-center mt-2">CODE
+                            <span>
+                                <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
+                                <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
+                                <li class="bg-primary rounded-5 circles mx-1 list-unstyled "></li>
+                            </span>
+                        </h2>
+                    </div>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i class="bi bi-list text-primary fs-1"></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse bg-black rounded-3 w-100 m-0 collapsed-nav"
+                    id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0 w-100 nav-links">
+                        <a class="nav-links text-decoration-none" href="../index.html">
+                            <li class="px-2 py-3 text-center">Home</li>
+                        </a>
+                        <a class="nav-links text-decoration-none" href="./html/products.html"
+                            class="text-decoration-none">
+                            <li class="px-2 py-3 text-center">Products</li>
+                        </a>
+                        <a class="nav-links text-decoration-none" href="../html/checkout.html">
+                            <li class="px-2 py-3 text-center">Checkout</li>
+                        </a>
+                        <a class="nav-links text-decoration-none" href="../html/admin.html">
+                            <li class="px-2 py-3 text-center">Admin</li>
+                        </a>
+                    </ul>
 
-            <!-- navbar in the header -->
-            <nav class="navigation removed d-flex justify-content-lg-between align-items-center text-primary list-unstyled">
-                <a class="nav-links" href="../index.html">
-                    <li class="px-2">Home</li>
-                </a>
-                <a class="nav-links" href="./products.html" class="text-decoration-none">
-                    <li class="px-2">Products</li>
-                </a>
-                <a class="nav-links" href="#">
-                    <li class="px-2">Checkout</li>
-                </a>
-                <a class="nav-links" href="../html/admin.html">
-                    <li class="px-2">Admin</li>
-                </a>
-                <div class="close-button text-black d-md-none d-block">
-                    <i class="bi bi-x-lg"></i>
                 </div>
-            </nav>
-         
-        </header>
+            </div>
+        </nav>
         
+        <main class="h-auto">
+            <h1 class="text-center fs-1 fw-bolder text-white mt-4">Checkout</h1>
+            <div class="container checkout-container h-auto d-flex align-items-center flex-column"></div>
+        </main>
         <!-- main content -->
-        <main>
-            <!-- heading -->
+        <!-- <main>
             <h1 class="text-center fs-1 fw-bolder text-white my-5">Checkout</h1>
             <div class="container checkout-container h-75 d-flex align-items-center flex-column"></div>
-        </main>
+        </main> -->
         <footer class="h-auto pt-4">
             <div class="contacts ps-3 ">
                 <p class="heading text-center fw-normal fs-5 mt-1  text-primary lead">Contact Us</p>
@@ -123,6 +131,10 @@
 
     <!-- scripts -->
     <script src="../js/header.js"></script>
+     <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

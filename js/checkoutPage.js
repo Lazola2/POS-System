@@ -73,7 +73,7 @@ function renderCheckout() {
         
         // display the checkout total
         checkoutContainer.innerHTML +=
-            `<div class="checkout-total rounded-3 text-white d-flex flex-column justify-content-center ps-5">
+            `<div class="checkout-total mb-5 rounded-3 text-white d-flex flex-column justify-content-center ps-5">
                 <p class="display-total">Amount due: R${getTotalAmount()}</p>
                 <div class="checkout-buttons d-flex gap-3">
                     <button class="btn btn-success proceed-checkout" onclick="handleProceedToCheckout()">Proceed</button>

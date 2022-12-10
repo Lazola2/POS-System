@@ -10,6 +10,7 @@
 body {
     overflow-x: hidden;
     width: 100vw;
+    scroll-margin-top: 10vh;
 }
 
 .landing-section {
@@ -18,7 +19,7 @@ body {
         url('https://i.postimg.cc/Fskz57JJ/Background.png');
     background-size: cover;
     object-fit: cover;
-    padding: 0 3rem;
+    /* padding: 0 3rem; */    
 }
 
 header {
@@ -42,6 +43,7 @@ main {
     padding: 0 4rem;
     align-items: center;
     text-align: center;
+    padding-top: 13vh;
 }
 
 main h1 {
@@ -60,34 +62,6 @@ main button {
 @media screen and (max-width: 790px) {
     .landing-section {
         padding: 0 !important;
-    }
-
-    header {
-        padding: 0 !important;
-    }
-
-    
-
-    header nav{
-        display: flex;
-        flex-direction: column;
-        background: white;
-        position: absolute;
-        width: 100%;
-        height: auto;
-        align-items: flex-start;
-    }
-
-    header nav li {
-        height: 4rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        font-size: larger;
-        background-color: rgba(255, 255, 255, 0.791);
-        color: rgba(0, 0, 0, 0.902);
-        font-weight: 500;
     }
     main h1 {
         font-size: 35px;
