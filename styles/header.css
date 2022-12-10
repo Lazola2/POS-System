@@ -6,6 +6,15 @@
     background: none;
 }
 
+.circles-holder {
+    display: flex;
+}
+
+.circles {
+    height: 12px;
+    width: 12px;
+}
+
 .navbar-nav a li {
     font-size: 18px;
 }

@@ -57,14 +57,6 @@ let items = [
     },
     {
         id: 8,
-        brand: 'HP',
-        price: 7500,
-        specifications: ['HP 15 Series', 'Intel Celeron', '$GB RAM', '500GB HDD', 'Windows 10 Pro'],
-        color: 'White',
-        imageLink: 'https://i.postimg.cc/KvGgZbmX/hp.webp'
-    },
-    {
-        id: 9,
         brand: 'Asus',
         price: 36000,
         specifications: ['Asus ROG G15 Ryzen', 'i5 Processor', '8GB RAM', '1TB HDD', 'Windows 11'],
@@ -72,7 +64,7 @@ let items = [
         imageLink: 'https://i.postimg.cc/8csrDBVF/Asus-ROG.png'
     },
     {
-        id: 10,
+        id: 9,
         brand: 'Asus',
         price: 9000,
         specifications: ['Asus Extensa', 'Intel Core i5 Processor', '8GB RAM', '256GB SSD', 'Windows 10 Pro'],
