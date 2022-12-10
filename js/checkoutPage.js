@@ -8,7 +8,7 @@ let totalAmount = 0;
 const handleProceedToCheckout = () => {
     // clear the checkout in the local storage
     localStorage.setItem('checkout', JSON.stringify([]))
-
+ 
     // display a checkout message to the user
     checkoutContainer.innerHTML =
         `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-2 mt-3">
