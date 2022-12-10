@@ -74,6 +74,5 @@ let items = [
 ]
 
 // sending the data to the local storage
-// localStorage.setItem('items', JSON.stringify(items));
 localStorage.setItem('items', JSON.stringify(items));
 

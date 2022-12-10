@@ -54,7 +54,6 @@ let color = document.querySelector('.color-select');
 let brand = document.querySelector('.brand-select');
 
 btnFilter.addEventListener('click', (e) => {
-    
     e.preventDefault();
 
     // filter by price
