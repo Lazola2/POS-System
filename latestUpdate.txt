@@ -10,7 +10,7 @@ Tasks for tomorrow:
  Done - Create the flowchart in a app and add it to the project
  Almost done - Create the Checkout page and finish it
  Done - Finish the CRUD System
- - Responsiveness
+ Done - Responsiveness
  Done - Work on the remove item on checkout page
  Done - Work on the filter on the products page
  Done - Work on the sort on the admin page
@@ -18,4 +18,4 @@ Tasks for tomorrow:
  Done - Use the state(re-render the DOM when content has changed)
  Done - Add more if the are any
  Done - Change the images for the items
- - Fx the navigation
+ Done - Fx the navigation

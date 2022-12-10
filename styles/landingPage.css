@@ -19,8 +19,7 @@ body {
         linear-gradient(rgba(0, 0, 0, .85), rgba(0, 0, 0, .85)),
         url('https://i.postimg.cc/Fskz57JJ/Background.png');
     background-size: cover;
-    object-fit: cover;
-    /* padding: 0 3rem; */    
+    object-fit: cover;   
 }
 
 header {
@@ -44,7 +43,6 @@ main {
     padding: 0 4rem;
     align-items: center;
     text-align: center;
-    padding-top: 13vh;
 }
 
 main h1 {
