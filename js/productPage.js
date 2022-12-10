@@ -14,7 +14,6 @@ const addToCheckout = (checkoutItem) => {
 // load products into the products page
 const renderProducts = (_items_) =>{ 
     itemsContainer.innerHTML =  "";
-    let quantitySelected = 1;
 
     _items_.length === 0 ?
     itemsContainer.innerHTML = 

@@ -46,7 +46,7 @@ function removeCheckoutItem(item) {
 }
 
 function getTotalAmount(sum = 0){
-    checkoutData.forEach(item => sum += item.price)
+    checkoutData.forEach(item => sum += item.price);
     return sum;
 }
 
