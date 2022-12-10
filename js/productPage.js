@@ -25,7 +25,7 @@ const renderProducts = (_items_) =>{
     _items_.forEach(item => {
         let card = `
         <div class="card mb-5 text-white" style="width: 18rem;">
-            <img src="${item.imageLink}" class="card-img-top" alt="${item.brand}">
+            <img src="${item.imageLink}" class="card-img-top" alt="${item.brand}" loading="lazy">
             <div class="card-body">
                 <div class="name-and-price d-flex justify-content-between">
                     <h5 class="card-title">${item.brand}</h5>
