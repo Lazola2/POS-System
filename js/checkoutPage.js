@@ -79,6 +79,7 @@ function renderCheckout() {
                 </div>
             </div>`
     }
+    
     else {
         checkoutContainer.innerHTML =
             `<div class="d-flex flex-column align-items-center message-holder p-5 rounded-2 my-5">
