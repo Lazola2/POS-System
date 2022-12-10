@@ -69,7 +69,6 @@ function renderCheckout() {
             checkoutContainer.innerHTML += item;
         })
 
-        
         // display the checkout total
         checkoutContainer.innerHTML +=
             `<div class="checkout-total mb-5 rounded-3 text-white d-flex flex-column justify-content-center ps-5">
@@ -89,8 +88,6 @@ function renderCheckout() {
     }
 
 }
-
-
 
 // call the displayCheckout function on default
 document.addEventListener('DOMContentLoaded', () => {
